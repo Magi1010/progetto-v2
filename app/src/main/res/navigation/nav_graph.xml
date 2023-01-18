@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.simplenav.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+
+                android:id="@+id/homeToProfile"
+                app:destination="@id/Profile">
+        </action>
+
+
+
+
+
+    </fragment>
+
+
+
+
+
+
+
+
+
+<fragment
+android:id="@+id/Profile"
+android:name="com.example.simplenav.ProfileFragment"
+android:label="fragment_another"
+tools:layout="@layout/fragment_profile" >
+    <action
+
+        android:id="@+id/ProfiletoHome"
+        app:destination="@id/home">
+    </action>
+
+    <action
+        android:id="@+id/ProfiletoFollow"
+        app:destination="@id/another2">
+    </action>
+
+
+
+</fragment>
+
+
+
+
+
+
+
+
+
+    <fragment
+        android:id="@+id/another2"
+        android:name="com.example.simplenav.Another"
+        android:label="fragment_another"
+        tools:layout="@layout/fragment_another" >
+    <action
+        android:id="@+id/FollowtoProfile"
+        app:destination="@id/Profile">
+    </action>
+    </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/user"
+        android:name="com.example.simplenav.UserModify"
+        android:label="UserModify"
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/modify"
+            app:destination="@id/modifica">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/modifica"
+        android:name="com.example.simplenav.FragmentModify"
+        android:label="FragmentModify"
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/modifytoUser"
+            app:destination="@id/user">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/add"
+        android:name="com.example.simplenav.AddTwokFragment"
+        android:label="FragmentModify"
+        tools:layout="@layout/fragment_add_twok" >
+
+    </fragment>
+
+
+
+</navigation>
